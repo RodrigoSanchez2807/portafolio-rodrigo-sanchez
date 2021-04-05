@@ -60,6 +60,14 @@ ul{
     color: #fff;
 }
 
+.navLeft li a i{
+    font-size: 25px;
+}
+
+.navLeft li a i:hover{
+    color: #464545;
+}
+
 .menu-tog{
     display: none;
     margin-left: auto;
