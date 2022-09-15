@@ -11,10 +11,6 @@ body{
     background-color: #ebebeb;
 }
 
-ul{
-    list-style: none;
-}
-
 .container{
     width:100%;
     padding: 70px 0px;
@@ -23,48 +19,48 @@ ul{
 
 /*Navegacion*/
 .navigation{
-    font-size: 17px;
     display: flex;
+    flex-direction: row;
+    font-size: 16px;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    white-space: nowrap;
-    height: 70px;
-    padding: 10px 90px;
-    color: #fff;
+    height: 12vh;
+    padding: 10px 60px;
     position: fixed;
     background-color: #686767;
 }
 
-.navigation ul{
+.main-menu, .menu-icon{
     display: flex;  
-}
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    height: 100%;
+} 
 
-
-.navRight a{
-    padding: 10px 20px;
+.menu-link{
     text-decoration: none;
     color: #fff;
+    padding: 0.5em;
 }
 
-.navRight a:hover{
+.menu-icon{
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+} 
+
+.link-icon{
+    font-size: 1.3em;
+    color: #fff;
+    width: auto;
+}
+
+.menu-link:hover{
     background-color: #464545;
 }
 
-.navLeft {
-    padding-left: 40%;
-}
-
-.navLeft li a{
-    padding: 20px;
-    color: #fff;
-}
-
-.navLeft li a i{
-    font-size: 25px;
-}
-
-.navLeft li a i:hover{
+.link-icon:hover{
     color: #464545;
 }
 
@@ -82,7 +78,7 @@ ul{
 .banner{
     padding: 100px;
     width: 100%;
-    height: 650px;
+    height: 90vh;
     margin: auto;
     background: url(images/banner.jpg) no-repeat center center/cover;
     text-align: center;
@@ -308,13 +304,57 @@ footer h2 span{
 
 @media screen and (max-width:700px){
 
-    .menu-tog{
-        display: block;
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 85vw;
+        background-color: #686767;
+        /* opacity: 0.9; */
+        transition: transform 0.5s;
+        transform: translateX(-100%);
     }
+
+    .navigation--show{
+        transform: translateX(0%);
+    }
+
+    .main-menu{    
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;        
+    }
+
+    .menu-item{
+        padding: 1.5em;
+    }
+
+    .menu-icon{
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 4em;
+    }
+
+    .menu-tog{
+        position: absolute;
+        right: 1rem;
+        align-self: center;
+        display: block;
+        color: #000;
+    }
+
+    /* .menu-tog--close::before{
+        content: "\f00d";
+        color: #000;
+    } */
 
     .banner{
         width: 100%;
         margin: auto;
+        height: 100vh; /*Pendiente*/
+        background-color: #1d4ba2;
+        
     }
 
     .banner h1{
