@@ -4,6 +4,10 @@
     padding:0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Raleway', sans-serif;
     background-size: 100 vw 100vh;
@@ -310,7 +314,6 @@ footer h2 span{
         height: 100vh;
         width: 85vw;
         background-color: #686767;
-        /* opacity: 0.9; */
         transition: transform 0.5s;
         transform: translateX(-100%);
     }
@@ -323,7 +326,8 @@ footer h2 span{
         display: flex;
         flex-direction: column;
         align-items: center; 
-        justify-content: center;        
+        justify-content: center;   
+        margin-top: 5em;
     }
 
     .menu-item{
@@ -333,7 +337,7 @@ footer h2 span{
     .menu-icon{
         justify-content: center;
         align-items: flex-end;
-        padding-bottom: 4em;
+        padding-bottom: 10em;
     }
 
     .menu-tog{
@@ -341,18 +345,25 @@ footer h2 span{
         right: 1rem;
         align-self: center;
         display: block;
-        color: #000;
     }
 
-    /* .menu-tog--close::before{
-        content: "\f00d";
-        color: #000;
-    } */
+    .r-menu-area{
+        
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        position: fixed;
+        background-color: #686767;
+        opacity: 0.7;
+        width: 100vw;
+        height: 9.3vh;
+        
+    }
 
     .banner{
         width: 100%;
         margin: auto;
-        height: 100vh; /*Pendiente*/
+        height: 100vh;
         background-color: #1d4ba2;
         
     }
