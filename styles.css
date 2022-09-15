@@ -124,7 +124,9 @@ body{
 #about p{
     padding: 20px;
     font-size: 20px;
+    margin-bottom: 2em;
 }
+
 
 /*Conocimientos*/
 
@@ -220,7 +222,7 @@ body{
     padding-bottom: 40px;
 }
 
-#projects .btnVer{
+.btnAll{
     padding: 15px;
     width: auto;
     background-color: #3773BA;
@@ -229,7 +231,7 @@ body{
     border-radius: 20px;
 }
 
-#projects .btnVer a{
+.btnAll a{
     padding: 20px;
 }
 
